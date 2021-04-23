@@ -37,6 +37,7 @@ Product.init(
         references: {
           model: "category",
           key: "id"
+          // references replace the need for foreign keys
         }
       }
     }
