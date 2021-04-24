@@ -12,11 +12,10 @@ router.get('/', (req, res) => {
       model: Product, attributes:["id", "product_name", "price", "category_id"],
     }]
   })
-  
-  .then((catData) => res.json(catData))
-  .catch((err));
-  res.status(500).json(err)
-});
+ // .then((catData) => res.json(catData))
+ .then((dbCategoryData) => res.json(dbCategoryData)) 
+ .catch (err => res.status(500).json(err)
+);})
 
 router.get('/:id', (req, res) => {
   // find one category by its `id` value
